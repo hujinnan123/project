@@ -1,5 +1,8 @@
 import React, { Component ,Fragment} from 'react';
 import {HashRouter as Router,Route,NavLink,Switch} from "react-router-dom";
+import { Provider } from "react-redux";
+import store from "./store";
+
 
 import "./reset.css";
 import "./app.scss";
@@ -16,26 +19,48 @@ import List from "./components/list";
 class App extends Component {
   render() {
     return (
-    <Router>
-      <Fragment>
-        <Switch> {/* 精准匹配 */}
-          <Route path="/home" component = {Home}/>
-          <Route path="/order" component = {Order}/>
-          <Route path="/my" component = {My}/>
-          <Route path="/list" component = {List}/>
-          {/* <Route path="/" to = "/home/"/> */}
+      <Provider store={store}>
+        <Router>
+          <Fragment>
+            <Switch> {/* 精准匹配 */}
+              <Route path="/home" component = {Home}/>
+              <Route path="/order" component = {Order}/>
+              <Route path="/my" component = {My}/>
+              <Route path="/list" component = {List}/>
+              {/* <Route path="/" to = "/home/"/> */}
 
-        </Switch>
-        <footer>
-            <ul>
-              <li><NavLink to="/home">首页</NavLink></li>
-              <li><NavLink to="/list">详情</NavLink></li>
-              <li><NavLink to="/order">订阅</NavLink></li>
-              <li><NavLink to="/my">我的</NavLink></li>
-            </ul>
-        </footer>
-      </Fragment>
-      </Router>
+            </Switch>
+            <footer>
+                <ul>
+                  <li>
+                    <NavLink to="/home">
+                      <i className="iconfont">&#xe64c;</i> 
+                      <span>首页</span>
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/list">
+                      <i className="iconfont">&#xe7f9;</i>                   
+                      <span>分类</span>
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/order">
+                      <i className="iconfont">&#xe606;</i>                   
+                      <span>购物车</span>
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/my">
+                      <i className="iconfont">&#xe604;</i>                   
+                      <span>我的酒仙</span>
+                    </NavLink>
+                  </li>
+                </ul>
+            </footer>
+          </Fragment>
+        </Router>
+      </Provider>
     );
   }
 }

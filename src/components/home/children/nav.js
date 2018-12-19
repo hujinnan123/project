@@ -5,16 +5,8 @@ export default class Nav extends Component {
     render(){
         return (
             <div className="nav">
-                <a href=""/>
-                <a href=""/>
-                <a href=""/>
-                <a href=""/>
-                <a href=""/>
-                <a href=""/>
-                <a href=""/>
-                <a href=""/>
-                <a href=""/>
-                <a href=""/>
+                <span></span>
+                
             </div>
         )
         
