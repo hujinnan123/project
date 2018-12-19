@@ -17,8 +17,7 @@ export default class Swipe extends Component {
                                             <img src={item.img} alt="mei" key={index} />
                                         </div>
                             }) : "正在加载"
-                        }
-                        
+                        }           
                     </div>
                     {/* <!-- 如果需要分页器 --> */}
                     <div className="swiper-pagination"></div>
