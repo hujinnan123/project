@@ -1,0 +1,45 @@
+.h-hotlist{
+    overflow: hidden;
+    margin-left:5px; 
+    padding: 5px 0;
+    height: 170px;
+    // background: red;
+    .h-item{
+        display: flex;
+        flex-direction:column;
+        margin-left: 5px;
+        height: 160px;
+        width: 100px;
+        text-align: center;
+        .h-item-pic{
+
+            img{
+                width: 96px;
+                height: 96px;
+            }
+        }
+
+        .h-item-title{
+            color: #252525;
+            height: 32px;
+            line-height: 14px;
+            overflow: hidden;
+            font-size: 12px;
+        }
+        .h-item-price{
+
+            span{
+                display: block;
+                color: #fc5a5a;
+                font-size: 16px;
+                line-height: 14px;
+
+            }
+            .h-del{
+                font-size: 12px;
+                color: #999;
+                text-decoration: line-through;
+            }
+        }
+    }
+}

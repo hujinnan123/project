@@ -30,6 +30,7 @@ class App extends Component {
               {/* <Route path="/" to = "/home/"/> */}
 
             </Switch>
+            
             <footer>
                 <ul>
                   <li>
