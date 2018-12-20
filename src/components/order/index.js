@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-import React,{Component,Fragment} from "react" ;
-
-export default class Home extends Component{
-    constructor(){
-        super()
-
-        this.state = {
-            
-        }
-    }
-    render(){
-        return(
-            <Fragment>这是order页</Fragment>
-        )
-    }
-=======
 import React,{Component,Fragment} from "react" ;
 import {HashRouter as Router,Route,Switch,NavLink,Redirect} from "react-router-dom";
 
@@ -58,5 +41,4 @@ export default class Home extends Component{
             </Fragment>
         )
     }
->>>>>>> chen
 }
