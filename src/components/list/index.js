@@ -10,7 +10,22 @@ export default class Home extends Component{
     }
     render(){
         return(
-            <Fragment>这是List页</Fragment>
+            <Fragment>
+                <div className="w-header"> {/*头部*/}
+                    <a href="#" className="w-left">返</a>
+                    <h2>找回密码</h2>
+                    <a href="#" className="w-right">列</a>
+                </div>
+                <div className="w-zhmm">{/*下面那一大块*/}
+                    <div className="w-zhmmcontent">
+                        <div className="w-zhmmlet">
+                            <i>图</i>
+                            <input />
+                            <span>账号绑定的手机号</span>
+                        </div>
+                    </div>
+                </div>
+            </Fragment>
         )
     }
 }
