@@ -1,0 +1,23 @@
+.h-show{
+    display: flex;
+    width: 100;
+    height: 193px;
+    flex-direction: column;
+
+    .h-show-top{
+        margin-top:-3px; 
+        height: 87.19px;
+        img{
+            width: 100%;
+            height: 87.19px;
+        }
+    }
+    .h-show-buttom{
+        margin-top:-3px; 
+        height: 105.6px;
+        img{
+            width: 187.6px;
+            height: 105.6px;
+        }
+    }
+}

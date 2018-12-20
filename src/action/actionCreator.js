@@ -1,7 +1,7 @@
 import {fetch} from "whatwg-fetch";
 
 export const swriper_action = ()=>({
-    type:"SWIPER_FULFILLED",
+    type:"SWIPER",
     payload : new Promise(resolve=>{
         let url = "http://localhost:8080/rotation";
         fetch(url).then(res=>res.json()).then((data)=>{
@@ -13,12 +13,12 @@ export const swriper_action = ()=>({
 })
 
 export const navBar_action = ()=>({
-    type:"NAVBAR_FUFILLED",
+    type:"NAVBAR",
     payload : new Promise(resove=>{
         let url = "http://localhost:8080/navBar";
         fetch(url).then(res=>res.json()).then((data)=>{
-            console.log(data);
-            resolve(data);
+            // console.log(data);
+            resove(data);
         })
     })
 })

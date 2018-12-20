@@ -8,7 +8,7 @@ export default class Swipe extends Component {
         let { swiperItem } = this.props;
         // console.log(swiperItem)
         return(
-            <div className="content-swiper">
+            <div className="content-swiper h-swiper">
                 <div className="swiper-container" ref="swiper_banner">
                     <div className="swiper-wrapper">
                         {
@@ -28,15 +28,19 @@ export default class Swipe extends Component {
 
     componentDidMount(){
         new Swiper(this.refs.swiper_banner,{
-                loop: true, // 循环模式选项
-                // 如果需要分页器
-                autoplay: {   //滑动后继续播放（不写官方默认暂停）
-                    disableOnInteraction: false,
+                autoplay:{
+                    delay:3000,
+                    stopOnLastSlide:false,
+                    disableOnInteraction:false
                 },
+                // loop: true, // 循环模式选项
+                // 如果需要分页器
+                
                 pagination: {
                     el: '.swiper-pagination',
                 },
-                observer:true
+                observer:true,
+                observerParents:true
         })
     }
 }

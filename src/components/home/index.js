@@ -4,7 +4,10 @@ import {connect} from "react-redux";
 import Header from "./children/header";
 import Swipe from "./children/swiper";
 import Nav from "./children/nav";
-
+import Showinfo from "./children/showInfo";
+import Newsbox from "./children/newsBox";
+import Time from "./children/time";
+import Hotlist from "./children/hotList";
 
 import {
     swriper_action,
@@ -17,13 +20,18 @@ from "../../action/actionCreator";
 class Home extends Component{
 
     render(){
-        let {swiperList} = this.props;
+        let {swiperList,navBarList} = this.props;
         // console.log(swiperList);
         return(
             <Fragment>
                 <Header/>
                 <Swipe swiperItem = {swiperList}/>
-                <Nav />
+                <Nav navBarList = {navBarList} />
+                <Showinfo/>
+                <Newsbox/>
+                <Time/>
+                <Hotlist/>
+                <div style={{height:'54px'}}></div>
             </Fragment> 
         )
     }
@@ -36,7 +44,7 @@ class Home extends Component{
 
 const mapStateToProps = (state)=>({
     swiperList:state.home.swiperList,
-
+    navBarList : state.home.navBarList
 })
 
 const mapDispatchToProps = (dispatch)=>({

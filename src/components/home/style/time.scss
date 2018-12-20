@@ -1,0 +1,36 @@
+.h-spikeBox{
+    height: 31px;
+    font-size: 13px;
+    
+    .h-spikeTit{
+        display: flex;
+        margin-left:10px; 
+        .h-lastTime{
+            margin-left:10px; 
+            border-bottom:  1px solid #ededed;
+            .bg{
+                display: inline-block;
+                margin-left:5px; 
+                width: 16px;
+                height: 16px;
+                background: #666;
+                vertical-align: middle;
+                line-height: 16px;
+                text-align: center;
+                color: #fff;
+            }
+        }
+        .h-more{
+            margin-left:15px; 
+            .h-yuan{
+                height: 15px;
+                width: 15px;
+                border-radius:50%;
+                background: #666;
+                color :#fff;
+                text-align: center;
+                vertical-align: middle;
+            }
+        }
+    }
+}
