@@ -6,7 +6,7 @@ export default class Nav extends Component {
         let { navBarList } = this.props;
         // console.log(navBarList.length);
         return (
-            <div className="nav">
+            <div className="h-nav">
             {
                 navBarList.length>0?navBarList.map((item,index)=>{
                     return  <span key={index}>

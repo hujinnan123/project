@@ -28,11 +28,13 @@ $c:25;
         width: 300px;
         height: 27px;
         background: #fff;
-        line-height: 27px;
-        font-size: 12px;
         text-align: center;
         color: #666;
+        span{
+            font-size: 12px;
+            line-height: 27px;
 
+        }
         .iconfont{
             position: absolute;
             top: -3px;

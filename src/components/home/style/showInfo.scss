@@ -1,6 +1,6 @@
 .h-show{
     display: flex;
-    width: 100;
+    width: 100%;
     height: 193px;
     flex-direction: column;
 
@@ -13,6 +13,7 @@
         }
     }
     .h-show-buttom{
+        display: flex;
         margin-top:-3px; 
         height: 105.6px;
         img{

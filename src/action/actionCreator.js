@@ -22,3 +22,23 @@ export const navBar_action = ()=>({
         })
     })
 })
+
+export const hostList_action =()=>({
+    type : "HOSTLIST",
+    payload : new Promise(resove=>{
+        let url = "http://localhost:8080/list";
+        fetch(url).then(res=>res.json()).then((data)=>{
+            resove(data);
+        })
+    })
+})
+
+export const tabBar_action =()=>({
+    type : "TABBAR",
+    payload : new Promise(resove=>{
+        let url = "http://localhost:8080/tabBar";
+        fetch(url).then(res=>res.json()).then((data)=>{
+            resove(data);
+        })
+    })
+})

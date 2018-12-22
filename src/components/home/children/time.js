@@ -15,11 +15,11 @@ export default class Time extends Component {
                         <span>掌上秒拍</span>
                         <div className="h-lastTime">
                             <span>时间为：</span>
-                            <span className="h-hours bg">{date.getHours()>10?date.getHours():"0"+date.getHours()}</span>
+                            <span className="h-hours bg">{date.getHours()>=10?date.getHours():"0"+date.getHours()}</span>
                             <em>:</em>
-                            <span className="h-minutes bg">{date.getMinutes()>10?date.getMinutes():"0"+date.getMinutes()}</span>
+                            <span className="h-minutes bg">{date.getMinutes()>=10?date.getMinutes():"0"+date.getMinutes()}</span>
                             <em>:</em>
-                            <span className="h-seconds bg">{date.getSeconds()>10?date.getSeconds():"0"+date.getSeconds()}</span>
+                            <span className="h-seconds bg">{date.getSeconds()>=10?date.getSeconds():"0"+date.getSeconds()}</span>
                         </div>
                         <div className="h-more">
                             <span>更多商品的你来抢！</span>

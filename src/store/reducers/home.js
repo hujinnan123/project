@@ -1,6 +1,8 @@
 const defaultState = {
     swiperList : [],
-    navBarList : []
+    navBarList : [],
+    hostList : [],
+    tabBarList:[]
 }
 
 export default (state=defaultState,action)=>{
@@ -16,6 +18,16 @@ export default (state=defaultState,action)=>{
             navBarList.navBarList = action.payload;
             // console.log(1111111111111111)
             return navBarList
+        case "HOSTLIST_FULFILLED" :
+            let hostList = JSON.parse(JSON.stringify(state));
+            hostList.hostList = action.payload;
+            // console.log(1111111111111111)
+            return hostList
+        case "TABBAR_FULFILLED" :
+            let tabBar = JSON.parse(JSON.stringify(state));
+            tabBar.tabBarList = action.payload;
+            // console.log(tabBar.tabBarList)
+            return tabBar
         default :
     }
     return state;
